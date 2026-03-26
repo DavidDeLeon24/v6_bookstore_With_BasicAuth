@@ -30,7 +30,7 @@ public class BookController {
         return ResponseEntity.ok(new ApiResponse<>(true, "Books fetched successfully", books)) ;
     }
 
-    // Get book by ID
+    // Get book by Id
     @GetMapping("/{id}")
     public ResponseEntity<ApiResponse<BookResponse>> getBookById(@PathVariable Long id) {
         BookResponse book = bookService.getBookById(id);
