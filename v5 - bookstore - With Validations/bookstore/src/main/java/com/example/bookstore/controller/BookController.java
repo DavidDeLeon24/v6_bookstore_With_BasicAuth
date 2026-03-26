@@ -23,7 +23,7 @@ public class BookController {
         this.bookService = bookService;
     }
 
-    // Get all books or filter by category
+    // Get all books or filter by Category
     @GetMapping
     public ResponseEntity<ApiResponse<List<BookResponse>>> getBooks(@RequestParam(required = false) String category) {
         List<BookResponse> books = bookService.getAllBooks(category);
