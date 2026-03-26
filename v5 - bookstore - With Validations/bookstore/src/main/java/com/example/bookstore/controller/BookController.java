@@ -37,7 +37,7 @@ public class BookController {
         return ResponseEntity.ok(new ApiResponse<>(true,  "Book fetched successfully", book));
     }
 
-    // Create book
+    // Create new book
     @PostMapping
     public ResponseEntity<ApiResponse<BookResponse>> createBook(@Valid @RequestBody createBookRequest newBook) {
         BookResponse created = bookService.createBook(newBook);
