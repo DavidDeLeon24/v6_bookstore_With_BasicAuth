@@ -55,7 +55,7 @@ public class BookController {
         return ResponseEntity.ok(new ApiResponse<>(true, "Book updated successfully", updated));
     }
 
-    // Delete book by ID
+    // Delete book by Id
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteBook(@PathVariable Long id) {
         bookService.deleteBook(id);
