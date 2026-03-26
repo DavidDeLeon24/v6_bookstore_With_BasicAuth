@@ -46,7 +46,7 @@ public class BookController {
         return ResponseEntity.created(location).body(new ApiResponse<>(true, "Book created successfully", created));
     }
 
-    // Update book by ID
+    // Update book by Id
     @PutMapping("/{id}")
     public ResponseEntity<ApiResponse<Book>> updateBook(@PathVariable Long id,
                            @RequestBody Book updatedBook) {
